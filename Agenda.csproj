@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D08AF48-894B-446B-BE20-6E4B483CFCBC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agenda</RootNamespace>
+    <AssemblyName>Cronos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Cronos.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Cronos.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_agendaDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_agendaDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadastroFuncionario.Designer.cs">
+      <DependentUpon>cadastroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro_de_usuário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro_de_usuário.Designer.cs">
+      <DependentUpon>Cadastro_de_usuário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class_agendamento.cs" />
+    <Compile Include="class_funcionario.cs" />
+    <Compile Include="class_servico.cs" />
+    <Compile Include="Cla_login.cs" />
+    <Compile Include="Editar_cd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_cd.Designer.cs">
+      <DependentUpon>Editar_cd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_ns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_ns.Designer.cs">
+      <DependentUpon>Editar_ns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_sv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_sv.Designer.cs">
+      <DependentUpon>Editar_sv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_usuário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_usuário.Designer.cs">
+      <DependentUpon>Editar_usuário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="novoAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="novoAgendamento.Designer.cs">
+      <DependentUpon>novoAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="novoServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="novoServico.Designer.cs">
+      <DependentUpon>novoServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="telaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telaPrincipal.Designer.cs">
+      <DependentUpon>telaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela_espera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela_espera.Designer.cs">
+      <DependentUpon>tela_espera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verificacoes.cs" />
+    <Compile Include="Ver_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_funcionario.Designer.cs">
+      <DependentUpon>Ver_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ver_servicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_servicos.Designer.cs">
+      <DependentUpon>Ver_servicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ver_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver_usuarios.Designer.cs">
+      <DependentUpon>Ver_usuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastroFuncionario.resx">
+      <DependentUpon>cadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro_de_usuário.resx">
+      <DependentUpon>Cadastro_de_usuário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_cd.resx">
+      <DependentUpon>Editar_cd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_ns.resx">
+      <DependentUpon>Editar_ns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_sv.resx">
+      <DependentUpon>Editar_sv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_usuário.resx">
+      <DependentUpon>Editar_usuário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="novoAgendamento.resx">
+      <DependentUpon>novoAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="novoServico.resx">
+      <DependentUpon>novoServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="telaPrincipal.resx">
+      <DependentUpon>telaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela_espera.resx">
+      <DependentUpon>tela_espera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ver_funcionario.resx">
+      <DependentUpon>Ver_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ver_servicos.resx">
+      <DependentUpon>Ver_servicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ver_usuarios.resx">
+      <DependentUpon>Ver_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="bd_agendaDataSet.xsc">
+      <DependentUpon>bd_agendaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet.xss">
+      <DependentUpon>bd_agendaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet1.xsc">
+      <DependentUpon>bd_agendaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet1.xss">
+      <DependentUpon>bd_agendaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet10.xsc">
+      <DependentUpon>bd_agendaDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet10.xss">
+      <DependentUpon>bd_agendaDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet11.xsc">
+      <DependentUpon>bd_agendaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet11.xss">
+      <DependentUpon>bd_agendaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet12.xsc">
+      <DependentUpon>bd_agendaDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet12.xss">
+      <DependentUpon>bd_agendaDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet13.xsc">
+      <DependentUpon>bd_agendaDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet13.xss">
+      <DependentUpon>bd_agendaDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet14.xsc">
+      <DependentUpon>bd_agendaDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet14.xss">
+      <DependentUpon>bd_agendaDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet15.xsc">
+      <DependentUpon>bd_agendaDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet15.xss">
+      <DependentUpon>bd_agendaDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet16.xsc">
+      <DependentUpon>bd_agendaDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet16.xss">
+      <DependentUpon>bd_agendaDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet17.xsc">
+      <DependentUpon>bd_agendaDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet17.xss">
+      <DependentUpon>bd_agendaDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet18.xsc">
+      <DependentUpon>bd_agendaDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet18.xss">
+      <DependentUpon>bd_agendaDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet19.xsc">
+      <DependentUpon>bd_agendaDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet19.xss">
+      <DependentUpon>bd_agendaDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet2.xsc">
+      <DependentUpon>bd_agendaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet2.xss">
+      <DependentUpon>bd_agendaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet3.xsc">
+      <DependentUpon>bd_agendaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet3.xss">
+      <DependentUpon>bd_agendaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet4.xsc">
+      <DependentUpon>bd_agendaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet4.xss">
+      <DependentUpon>bd_agendaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet5.xsc">
+      <DependentUpon>bd_agendaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet5.xss">
+      <DependentUpon>bd_agendaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet6.xsc">
+      <DependentUpon>bd_agendaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet6.xss">
+      <DependentUpon>bd_agendaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet7.xsc">
+      <DependentUpon>bd_agendaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet7.xss">
+      <DependentUpon>bd_agendaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet8.xsc">
+      <DependentUpon>bd_agendaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet8.xss">
+      <DependentUpon>bd_agendaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet9.xsc">
+      <DependentUpon>bd_agendaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="bd_agendaDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_agendaDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_agendaDataSet9.xss">
+      <DependentUpon>bd_agendaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75-de-desconto-reconstrucao-capilar-com-ouro-marroquino-da-INOAR-no-Vitrine-Studio-Hair-de-R-180-por-R-45..jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carregando.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

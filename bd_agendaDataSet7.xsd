@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bd_agendaDataSet7" targetNamespace="http://tempuri.org/bd_agendaDataSet7.xsd" xmlns:mstns="http://tempuri.org/bd_agendaDataSet7.xsd" xmlns="http://tempuri.org/bd_agendaDataSet7.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bd_agendaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bd_agendaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Agenda.Properties.Settings.GlobalReference.Default.bd_agendaConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_servicoTableAdapter" GeneratorDataComponentClassName="tbl_servicoTableAdapter" Name="tbl_servico" UserDataComponentName="tbl_servicoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_agendaConnectionString (Settings)" DbObjectName="bd_agenda.tbl_servico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `nome_servico` FROM `tbl_servico`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nome_servico" DataSetColumn="nome_servico" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bd_agendaDataSet7" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bd_agendaDataSet7" msprop:Generator_UserDSName="bd_agendaDataSet7">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_servico" msprop:Generator_TableClassName="tbl_servicoDataTable" msprop:Generator_TableVarName="tabletbl_servico" msprop:Generator_TablePropName="tbl_servico" msprop:Generator_RowDeletingName="tbl_servicoRowDeleting" msprop:Generator_UserTableName="tbl_servico" msprop:Generator_RowChangingName="tbl_servicoRowChanging" msprop:Generator_RowEvHandlerName="tbl_servicoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_servicoRowDeleted" msprop:Generator_RowEvArgName="tbl_servicoRowChangeEvent" msprop:Generator_RowChangedName="tbl_servicoRowChanged" msprop:Generator_RowClassName="tbl_servicoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nome_servico" msprop:Generator_ColumnVarNameInTable="columnnome_servico" msprop:Generator_ColumnPropNameInRow="nome_servico" msprop:Generator_ColumnPropNameInTable="nome_servicoColumn" msprop:Generator_UserColumnName="nome_servico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
